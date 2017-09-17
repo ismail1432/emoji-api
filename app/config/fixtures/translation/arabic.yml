@@ -1,0 +1,15 @@
+arabic:
+#CATEGORY => TRANSPORT
+        datas:
+            rocket: صاروخ
+            railway car: ترامواي
+            high-speed train: قطار
+            metro: مترو
+            bus: حافلة
+            ambulance: سيارة إسعاف
+            fire engine: سيارة الإطفاء
+            police car: سيارة الشرطة
+            taxi: تاكسي
+            car: سيارة
+            truck: شاحنة
+            ship: سفينة

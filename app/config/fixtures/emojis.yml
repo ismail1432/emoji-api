@@ -1,0 +1,16 @@
+#CATEGORY
+transport:
+   datas:
+        1F680 : rocket
+        1F683 : railway car
+        1F684: high-speed train
+        1F687: metro
+        1F68C: bus
+        1F691: ambulance
+        1F692: fire engine
+        1F693: police car
+        1F695: taxi
+        1F697: car
+        1F69A: truck
+        1F6A2: ship
+

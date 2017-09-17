@@ -37,10 +37,24 @@ class Emoji
     private $description;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="translate", type="string", length=255, nullable=true)
+     */
+    private $translate;
+
+    /**
      * One Emoji has Many Translations.
-     * @ORM\OneToMany(targetEntity="Translation", mappedBy="emoji")
+     * @ORM\OneToMany(targetEntity="Translation", mappedBy="emoji", cascade="persist")
      */
     private $translations;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="category", type="string", length=255)
+     */
+    private $category;
 
 
     public function __construct()
@@ -140,5 +154,53 @@ class Emoji
     public function getTranslations()
     {
         return $this->translations;
+    }
+
+    /**
+     * Set translate
+     *
+     * @param string $translate
+     *
+     * @return Emoji
+     */
+    public function setTranslate($translate)
+    {
+        $this->translate = $translate;
+
+        return $this;
+    }
+
+    /**
+     * Get translate
+     *
+     * @return string
+     */
+    public function getTranslate()
+    {
+        return $this->translate;
+    }
+
+    /**
+     * Set category
+     *
+     * @param string
+     *
+     * @return Emoji
+     */
+    public function setCategory($category)
+    {
+        $this->category = $category;
+
+        return $this;
+    }
+
+    /**
+     * Get category
+     *
+     * @return \AppBundle\Entity\Category
+     */
+    public function getCategory()
+    {
+        return $this->category;
     }
 }

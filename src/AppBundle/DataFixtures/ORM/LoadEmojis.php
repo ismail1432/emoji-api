@@ -3,6 +3,7 @@
 namespace AppBundle\DataFixtures\ORM;
 
 use AppBundle\Entity\Emoji;
+use Symfony\Component\Yaml\Yaml;
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
 
@@ -16,19 +17,27 @@ class LoadEmojis implements FixtureInterface
 {
     public function load(ObjectManager $manager){
 
-        $emojis = new Emoji();
-        $a = "\u1F602";
-        $emojis->setUnicode($a);
-        $emojis->setDescription("grinning face with smiling esyes");
+        //dev dir !
+        $devDir    = 'app/config/fixtures';
 
-        $emoji = new Emoji();
-        $b = "\u1F601";
 
-        $emoji->setUnicode($b);
-        $emoji->setDescription("face with tears of josy");
+        $values = Yaml::parse(file_get_contents("$devDir/emojis.yml"));
+        foreach ($values as $key => $value){
 
-        $manager->persist($emoji);
-        $manager->persist($emojis);
+            $category = $key;
+
+            foreach ($value as $datas){
+                foreach ($datas as $unicode => $description){
+                $emoji = new Emoji();
+                $emoji->setCategory($category);
+                $emoji->setUnicode($unicode);
+                $emoji->setDescription($description);
+
+              $manager->persist($emoji);
+                }
+            }
+
+        }
         $manager->flush();
     }
 }
