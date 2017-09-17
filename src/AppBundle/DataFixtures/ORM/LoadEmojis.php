@@ -17,12 +17,15 @@ class LoadEmojis implements FixtureInterface
     public function load(ObjectManager $manager){
 
         $emojis = new Emoji();
-        $emojis->setUnicode("1F601");
-        $emojis->setDescription("grinning face with smiling eyes");
+        $a = "\u1F602";
+        $emojis->setUnicode($a);
+        $emojis->setDescription("grinning face with smiling esyes");
 
         $emoji = new Emoji();
-        $emoji->setUnicode("1F602");
-        $emoji->setDescription("face with tears of joy");
+        $b = "\u1F601";
+
+        $emoji->setUnicode($b);
+        $emoji->setDescription("face with tears of josy");
 
         $manager->persist($emoji);
         $manager->persist($emojis);
