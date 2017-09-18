@@ -1,15 +1,53 @@
 arabic:
 #CATEGORY => TRANSPORT
         datas:
-            rocket: صاروخ
-            railway car: ترامواي
-            high-speed train: قطار
-            metro: مترو
-            bus: حافلة
-            ambulance: سيارة إسعاف
-            fire engine: سيارة الإطفاء
-            police car: سيارة الشرطة
-            taxi: تاكسي
-            car: سيارة
-            truck: شاحنة
-            ship: سفينة
+#            rocket: صاروخ
+#            railway car: ترامواي
+#            high-speed train: قطار
+#            metro: مترو
+#            bus: حافلة
+#            ambulance: سيارة إسعاف
+#            fire engine: سيارة الإطفاء
+#            police car: سيارة الشرطة
+#            taxi: تاكسي
+#            car: سيارة
+#            truck: شاحنة
+#            ship: سفينة
+             watch: ساعة
+             snowman without snow:
+             fuel pump
+             closed umbrella
+             rainbow
+             coffee
+             tomato
+             aubergine
+             raisin
+             melon
+             watermelon
+             tangerine
+             banana
+             pineapple
+             red apple
+             green apple
+             peach
+             cherries
+             strawberry
+             hamburger
+             pizza
+             meat on bone
+             poultry leg
+             cooked rice
+             spaghetti
+             bread
+             french fries
+             doughnut
+             cookie
+             chocolate bar
+             candy
+             lollipop
+             soccer ball
+             baseball
+             tennis racquet and ball
+             basketball and hoop
+             american football
+             swimmer

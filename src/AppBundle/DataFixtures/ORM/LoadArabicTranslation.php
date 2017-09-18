@@ -36,12 +36,12 @@ class LoadArabicTranslation implements FixtureInterface
                     $translation->setLanguage($language);
                     $translation->setTranslation($translate);
                     $emoji->addTranslation($translation);
-                    $manager->persist($translation);
+                //    $manager->persist($translation);
                 }
             }
 
         }
-         $manager->flush();
+        // $manager->flush();
 
     }
 }
