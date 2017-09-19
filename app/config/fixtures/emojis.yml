@@ -1,18 +1,18 @@
 #CATEGORY
-#transport:
-#   datas:
-#        1F680 : rocket
-#        1F683 : railway car
-#        1F684: high-speed train
-#        1F687: metro
-#        1F68C: bus
-#        1F691: ambulance
-#        1F692: fire engine
-#        1F693: police car
-#        1F695: taxi
-#        1F697: car
-#        1F69A: truck
-#        1F6A2: ship
+transport:
+   datas:
+        1F680 : rocket
+        1F683 : railway car
+        1F684: high-speed train
+        1F687: metro
+        1F68C: bus
+        1F691: ambulance
+        1F692: fire engine
+        1F693: police car
+        1F695: taxi
+        1F697: car
+        1F69A: truck
+        1F6A2: ship
 uncategorized:
    datas:
         231A: watch
@@ -22,10 +22,10 @@ uncategorized:
         1F308: rainbow
 food:
     datas:
-        2616: coffee
+        2616:  coffee
         1F345: tomato
-        1F345: aubergine
-        1F347: raisin
+        1F346: aubergine
+        1F347: grapes
         1F348: melon
         1F349: watermelon
         1F34A: tangerine
@@ -43,7 +43,7 @@ food:
         1F35A: cooked rice
         1F35D: spaghetti
         1F35E: bread
-        1FE5F: french fries
+        1F35F: french fries
         1F369: doughnut
         1F36A: cookie
         1F36B: chocolate bar

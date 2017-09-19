@@ -3,7 +3,7 @@
 namespace AppBundle\DataFixtures\ORM;
 
 use AppBundle\Entity\Emoji;
-use Symfony\Component\Yaml\Yaml;
+use AppBundle\Tools\CustomYamlParser;
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
 
@@ -20,23 +20,26 @@ class LoadEmojis implements FixtureInterface
         //dev dir !
         $devDir    = 'app/config/fixtures';
 
-
-        $values = Yaml::parse(file_get_contents("$devDir/emojis.yml"));
+        $values = CustomYamlParser::yamlParser($devDir.'/emojis.yml');
         foreach ($values as $key => $value){
 
             $category = $key;
 
             foreach ($value as $datas){
                 foreach ($datas as $unicode => $description){
-                $emoji = new Emoji();
-                $emoji->setCategory($category);
-                $emoji->setUnicode($unicode);
-                $emoji->setDescription($description);
+                    //Trying to get the emoji for check if it's already store
+                    $emoji  = $manager->getRepository(Emoji::class)->findOneBy(['description'=>$description]);
 
-              $manager->persist($emoji);
+                    //if it's not, creating a new emoji
+                if(null === $emoji){
+                    $emoji = new Emoji();
+                    $emoji->setCategory($category);
+                    $emoji->setUnicode($unicode);
+                    $emoji->setDescription($description);
+                    $manager->persist($emoji);
+                    }
                 }
             }
-
         }
         $manager->flush();
     }

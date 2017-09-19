@@ -1,0 +1,53 @@
+french:
+#CATEGORY => TRANSPORT
+        datas:
+            rocket: fusée
+            railway car: tramway
+            high-speed train: train
+            metro: metro
+            bus: bus
+            ambulance: ambulance
+            fire engine: camion pompier
+            police car: voiture de police
+            taxi: taxi
+            car: voiture
+            truck: camion
+            ship: bateau
+            watch: montre
+            snowman without snow: bonhomme de neige
+            fuel pump: pompe à essence
+            closed umbrella : paraplui fermée
+            rainbow: arc en ciel
+            coffee: café
+            tomato: tomate
+            aubergine: aubergine
+            grapes: raisin
+            melon: melon
+            watermelon: pastèque
+            tangerine: aubergine
+            banana: banane
+            pineapple: ananas
+            red apple: pomme rouge
+            green apple: pomme verte
+            peach: pêche
+            cherries: cerise
+            strawberry: fraise
+            hamburger: hamburger
+            pizza: pizza
+            meat on bone: jambon
+            poultry leg: cuisse de poulet
+            cooked rice: riz cuit
+            spaghetti: spaghetti
+            bread: pain
+            french fries: frites
+            doughnut: donut
+            cookie: cookie
+            chocolate bar: barre de chocolat
+            candy: bonbon
+            lollipop: sucette
+            soccer ball: ballon de foot
+            baseball: baseball
+            tennis racquet and ball: tennis
+            basketball and hoop: basketball
+            american football: football américain
+            swimmer: nageur

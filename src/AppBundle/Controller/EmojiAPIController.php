@@ -16,8 +16,8 @@ class EmojiAPIController extends Controller
      */
     public function indexAction(Request $request, $language)
     {
-        //$emojis = $this->getDoctrine()->getRepository('AppBundle:Translation')->findAllByLanguage($language);
-        $emojis = $this->getDoctrine()->getRepository('AppBundle:Emoji')->findAll();
+        $emojis = $this->getDoctrine()->getRepository('AppBundle:Translation')->findAllByLanguage($language);
+        //$emojis = $this->getDoctrine()->getRepository('AppBundle:Emoji')->findAll();
         $data = $this->get('jms_serializer')->serialize($emojis, 'json');
 
         $response = new Response($data);
