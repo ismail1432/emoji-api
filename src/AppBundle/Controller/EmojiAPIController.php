@@ -14,7 +14,7 @@ class EmojiAPIController extends Controller
      * @Route("/emojis/{language}", name="emojis_list")
      * @Method({"GET"})
      */
-    public function indexAction(Request $request, $language)
+    public function indexAction(Request $request, $language = null)
     {
         $emojis = $this->getDoctrine()->getRepository('AppBundle:Translation')->findAllByLanguage($language);
         //$emojis = $this->getDoctrine()->getRepository('AppBundle:Emoji')->findAll();

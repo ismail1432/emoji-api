@@ -36,6 +36,7 @@ class LoadEmojis implements FixtureInterface
                     $emoji->setCategory($category);
                     $emoji->setUnicode($unicode);
                     $emoji->setDescription($description);
+                    $emoji->setTranslate($description);
                     $manager->persist($emoji);
                     }
                 }

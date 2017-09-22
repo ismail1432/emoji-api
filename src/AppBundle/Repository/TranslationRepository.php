@@ -2,6 +2,7 @@
 
 namespace AppBundle\Repository;
 
+
 /**
  * TranslationRepository
  *
@@ -12,6 +13,10 @@ class TranslationRepository extends \Doctrine\ORM\EntityRepository
 {
     public function findAllByLanguage($language)
     {
+        if(null === $language || $language == 'english'){
+
+            return $this->getEntityManager()->getRepository('AppBundle:Emoji')->findAll();
+        }
         $emojisArray = [];
         $translations = $this->findBy(['language'=>$language]);
         foreach ($translations as $translation){
@@ -22,4 +27,6 @@ class TranslationRepository extends \Doctrine\ORM\EntityRepository
         }
         return $emojisArray;
     }
+
+
 }

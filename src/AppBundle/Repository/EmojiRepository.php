@@ -10,5 +10,4 @@ namespace AppBundle\Repository;
  */
 class EmojiRepository extends \Doctrine\ORM\EntityRepository
 {
-
 }
