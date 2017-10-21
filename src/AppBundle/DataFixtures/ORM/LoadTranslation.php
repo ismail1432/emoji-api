@@ -38,7 +38,8 @@ class LoadTranslation implements FixtureInterface
 
                     $translation  = $manager->getRepository(Translation::class)->findOneBy(['translation'=>$translate]);
 
-                    if($translation === null){
+                    if(null === $translation){
+                        echo $description;
                     $emoji  = $manager->getRepository(Emoji::class)->findOneBy(['description'=>$description]);
                     $translation = new Translation();
                     $translation->setLanguage($language);
