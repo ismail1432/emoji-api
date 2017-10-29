@@ -16,16 +16,16 @@ Example: [www.smaine.me/api/emojis/french]("http://www.smaine.me/api/emojis/fren
 
 ## Contribute
 It's a free open source project thanks to these contributors :
-* [Tonioverzeworld]("https://www.github.com/Tonioverzeworld")
-* [Tamer]("https://www.github.com/tamer-dev")
+* [https://www.github.com/Tonioverzeworld]("Tonioverzeworld")
+* [https://www.github.com/tamer-dev]("Tamer")
 
 #### Add Emoji
 
 Actually not all of emojis are availables if you want to contribute and add others, please follow these instructions :
 
 * Make Sure that the emoji itself or the translation/description doesn't exist yet !
-* The emoji's data should come from [here]("https://www.apps.timwhitlock.info/emoji/tables/unicode")
-* Open [emojis.yml]("https://www.github.com/ismail1432/emoji-api/blob/master/app/config/fixtures/emojis.yml"), add the emoji following these rules :
+* The emoji's data should come from [https://www.apps.timwhitlock.info/emoji/tables/unicode]("here")
+* Open [https://www.github.com/ismail1432/emoji-api/blob/master/app/config/fixtures/emojis.yml]("emojis.yml"), add the emoji following these rules :
 
 ```yaml
 category:
@@ -35,8 +35,8 @@ category:
 If the description is English there is no need to add the description so you can do a Pull Request
 
 #### Add a description in an other language than english
-* Make sure that the emoji exist in [emojis.yml]("https://github.com/ismail1432/emoji-api/blob/master/app/config/fixtures/emojis.yml")
-* All translations are in the [translation]("https://github.com/ismail1432/emoji-api/tree/master/app/config/fixtures/translation") directory.
+* Make sure that the emoji exist in [https://github.com/ismail1432/emoji-api/blob/master/app/config/fixtures/emojis.yml]("emojis.yml")
+* All translations are in the [https://github.com/ismail1432/emoji-api/tree/master/app/config/fixtures/translation]("translation") directory.
 * If you add a new language create the file / if the language exist open it and add information following theses rules
 ```yaml
 language:
