@@ -10,7 +10,10 @@ This API provides an Emojis description in different languages.
 
 You have acess to all emojis availables in this url [www.smaine.me/api/emojis]("http://www.smaine.me/api/emojis")
 
+There is 4 languages availables Arabic, English, French and Spanish
+
 If you want a specific language add the language parameter at the end of the url.
+
 Example: [www.smaine.me/api/emojis/french]("http://www.smaine.me/api/emojis/french")
 
 
