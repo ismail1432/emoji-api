@@ -16,16 +16,16 @@ Example: [www.smaine.me/api/emojis/french]("http://www.smaine.me/api/emojis/fren
 
 ## Contribute
 It's a free open source project thanks to these contributors :
-* [Tonioverzeworld]("https://github.com/Tonioverzeworld")
-* [Tamer]("https://github.com/tamer-dev")
+* [Tonioverzeworld]("https://www.github.com/Tonioverzeworld")
+* [Tamer]("https://www.github.com/tamer-dev")
 
 #### Add Emoji
 
 Actually not all of emojis are availables if you want to contribute and add others, please follow these instructions :
 
 * Make Sure that the emoji itself or the translation/description doesn't exist yet !
-* The emoji's data should come from [here]("https://apps.timwhitlock.info/emoji/tables/unicode")
-* Open [emojis.yml]("https://github.com/ismail1432/emoji-api/blob/master/app/config/fixtures/emojis.yml"), add the emoji following these rules :
+* The emoji's data should come from [here]("https://www.apps.timwhitlock.info/emoji/tables/unicode")
+* Open [emojis.yml]("https://www.github.com/ismail1432/emoji-api/blob/master/app/config/fixtures/emojis.yml"), add the emoji following these rules :
 
 ```yaml
 category:
