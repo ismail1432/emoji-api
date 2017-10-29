@@ -14,6 +14,7 @@ use AppBundle\Tools\CustomYamlParser;
 use Symfony\Component\Config\Definition\Exception\Exception;
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
+use Symfony\Component\Finder\Finder;
 
 class LoadTranslation implements FixtureInterface
 {
@@ -21,10 +22,12 @@ class LoadTranslation implements FixtureInterface
 
         //dev dir !
         $devDir    = "app/config/fixtures/translation";
-        $files =['french.yml', 'arabic.yml'];
 
-        foreach ($files as $file){
-            $values = CustomYamlParser::yamlParser($devDir.'/'.$file);
+        $finder = new Finder();
+        $finder->files()->in($devDir);
+
+        foreach ($finder as $file) {
+            $values = CustomYamlParser::yamlParser($devDir.'/'. $file->getRelativePathname());
             $this->saveDataFixtures($manager,$values);
         }
     }
@@ -39,14 +42,14 @@ class LoadTranslation implements FixtureInterface
                     $translation  = $manager->getRepository(Translation::class)->findOneBy(['translation'=>$translate]);
 
                     if(null === $translation){
-                        echo $description;
+
                     $emoji  = $manager->getRepository(Emoji::class)->findOneBy(['description'=>$description]);
                     $translation = new Translation();
                     $translation->setLanguage($language);
                     $translation->setTranslation($translate);
                     $emoji->addTranslation($translation);
 
-                    $manager->persist($translation);
+                   $manager->persist($translation);
                     }
                 }
             }

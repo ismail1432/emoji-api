@@ -11,15 +11,27 @@ use Symfony\Component\HttpFoundation\Response;
 class EmojiAPIController extends Controller
 {
     /**
-     * @Route("/emojis/{language}", name="emojis_list")
+     * @Route("/api/emojis", name="emojis")
      * @Method({"GET"})
      */
-    public function indexAction(Request $request, $language = null)
+    public function indexAction()
+    {
+        $emojis = $this->getDoctrine()->getRepository('AppBundle:Translation')->findAll();
+        $data = $this->get('jms_serializer')->serialize($emojis, 'json');
+        $response = new Response($data);
+        $response->headers->set('Content-Type', 'application/json');
+
+        return $response;
+    }
+
+    /**
+     * @Route("/api/emojis/{language}", name="emojis_list_translate")
+     * @Method({"GET"})
+     */
+    public function emojisByLanguageAction(Request $request, $language = null)
     {
         $emojis = $this->getDoctrine()->getRepository('AppBundle:Translation')->findAllByLanguage($language);
-        //$emojis = $this->getDoctrine()->getRepository('AppBundle:Emoji')->findAll();
         $data = $this->get('jms_serializer')->serialize($emojis, 'json');
-
         $response = new Response($data);
         $response->headers->set('Content-Type', 'application/json');
 
