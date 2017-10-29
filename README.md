@@ -24,6 +24,7 @@ It's a free open source project thanks to these contributors :
 Actually not all of emojis are availables if you want to contribute and add others, please follow these instructions :
 
 * Make Sure that the emoji itself or the translation/description doesn't exist yet !
+* The emoji's data should come from [here]("https://apps.timwhitlock.info/emoji/tables/unicode")
 * Open [emojis.yml]("https://github.com/ismail1432/emoji-api/blob/master/app/config/fixtures/emojis.yml"), add the emoji following these rules :
 
 ```yaml
